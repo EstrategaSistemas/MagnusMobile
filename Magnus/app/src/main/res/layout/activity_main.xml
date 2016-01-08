@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:fitsSystemWindows="true"
+    android:background="#FAFAFA"
+    tools:context="com.salemobile.essis.magnus.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout">
+
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:id="@+id/codigo" />
+
+        <Spinner
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:id="@+id/spNombre"
+            android:layout_toRightOf="@+id/codigo"
+            android:layout_toEndOf="@+id/codigo" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/contenedor"
+        android:layout_width="430dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/barraMenu"
+        android:layout_below="@+id/relativeLayout">
+
+    </RelativeLayout>
+    <GridLayout
+        android:id="@+id/barraMenu"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="0dp"
+        android:background="#BDBDBD"
+        android:columnCount="5"
+        android:rowCount="1"
+        android:paddingTop="4dp">
+        <ImageButton
+            android:id="@+id/ventas"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="#E0E0E0"
+            android:src="@drawable/car"/>
+        <ImageButton
+            android:id="@+id/cuentas"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="#E0E0E0"
+            android:src="@drawable/bill"/>
+        <ImageButton
+            android:id="@+id/almacen"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="#E0E0E0"
+            android:src="@drawable/box"/>
+        <ImageButton
+            android:id="@+id/siguiente"
+            android:layout_width="65dp"
+            android:background="#E0E0E0"
+            android:layout_height="match_parent"
+            android:src="@drawable/next"/>
+        <ImageButton
+            android:id="@+id/balance"
+            android:layout_width="65dp"
+            android:background="#E0E0E0"
+            android:layout_height="match_parent"
+            android:src="@drawable/balance"/>
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="25dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/contenedor"
+        android:layout_above="@+id/barraMenu"
+        android:id="@+id/lateral"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_toRightOf="@+id/contenedor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Ticket"
+            android:id="@+id/lblTicket"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textAlignment="center" />
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lsvProductos"
+            android:layout_below="@+id/lblTicket"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
